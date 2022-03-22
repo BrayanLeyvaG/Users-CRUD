@@ -2,18 +2,24 @@
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
-    gap: 40px;
-    justify-content: space-between;
+    gap: 40px;   
     
     
 }
 
+@media (max-width: 750px) {
+ .user-container{
+     justify-content: center;
+ }
+}
+
 .user-card{
-    width: 300px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 20px;
-    border: 1px solid #E5E5E5;    
+    border: 1px solid #E5E5E5;
+    width: 300px;
 }
+
 
 h3{
     font-size: 1.5em;
