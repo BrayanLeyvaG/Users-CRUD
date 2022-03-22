@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       {isShowing && <UsersForm getData={getData} userEdit={userEdit} setIsShowing={setIsShowing} isShowing={isShowing} setUserEdit = {setUserEdit}/>}
       <div className='header'>
-        <h1>Usuarios</h1>
+        <h1>Users</h1>
         <button onClick={() =>setIsShowing(!isShowing)}><i className="fas fa-plus"></i> New user</button>
       </div>
       <UsersList users={users} setUserEdit={setUserEdit} deleteUser={deleteUser} setIsShowing={setIsShowing}/>
