@@ -7,7 +7,7 @@ import { UsersList } from './components/UsersList';
 function App() {
   const [users, setUsers] = useState([])
   const [userEdit, setUserEdit] = useState(null)
-  console.log(userEdit)
+  const [isShowing, setIsShowing] = useState(false)
 
 
   function getData() {
@@ -26,9 +26,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Usuarios</h1>
-      <UsersForm getData={getData} userEdit={userEdit}/>
-      <UsersList users={users} setUserEdit={setUserEdit} deleteUser={deleteUser}/>
+      {isShowing && <UsersForm getData={getData} userEdit={userEdit} setIsShowing={setIsShowing} isShowing={isShowing} setUserEdit = {setUserEdit}/>}
+      <div className='header'>
+        <h1>Usuarios</h1>
+        <button onClick={() =>setIsShowing(!isShowing)}><i className="fas fa-plus"></i> New user</button>
+      </div>
+      <UsersList users={users} setUserEdit={setUserEdit} deleteUser={deleteUser} setIsShowing={setIsShowing}/>
     </div>
   );
 }

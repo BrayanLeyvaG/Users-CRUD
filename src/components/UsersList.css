@@ -1,0 +1,70 @@
+.user-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 40px;
+    justify-content: space-between;
+    
+    
+}
+
+.user-card{
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    border: 1px solid #E5E5E5;    
+}
+
+h3{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h5{
+    color: #D3D3D3;
+}
+
+.text-container{
+    margin-bottom: 12px;
+}
+
+.btns-container{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+hr{
+    border: 0.5px solid #E5E5E5;
+    margin: 15px 0;
+}
+
+.btns-card{
+    font-size: 1.2em;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.btn-delete{
+    background-color:  #D85D5D;
+    color: rgb(255, 210, 210);
+    border: 1px solid #D93F3F
+}
+
+.btn-delete:hover{
+    color: white;
+}
+
+.btn-edit{
+    background-color: #F7F7F7;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    color: #D3D3D3;
+}
+
+.btn-edit:hover{
+    color: #9c9c9c;
+}

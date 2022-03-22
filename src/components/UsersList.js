@@ -1,22 +1,25 @@
 import React from 'react'
+import './UsersList.css'
 
-export const UsersList = ({users, setUserEdit, deleteUser}) => {
+export const UsersList = ({users, setUserEdit, deleteUser, setIsShowing}) => {
   return (
-    <div>
+    <div className='user-container'>
         {users.map( user => (
-            <div className='user-container' key={user.id}>
+            <div className='user-card' key={user.id}>
                 <h3>{user.first_name} {user.last_name}</h3>
+                <hr/>
                 <div className="text-container">
-                    <p>EMAIL</p>
+                    <h5>EMAIL</h5>
                     <p>{user.email}</p>
                 </div>
                 <div className="text-container">
-                    <p>BIRTHDAY</p>
-                    <p>{user.birthday}</p>
+                    <h5>BIRTHDAY</h5>
+                    <p><i className="fas fa-birthday-cake"></i> {user.birthday}</p>
                 </div>
+                <hr/>
                 <div className="btns-container">
-                    <button onClick={() => deleteUser(user.id)} className="btns-card btn-delete"><i className="fas fa-trash-alt"></i></button>
-                    <button onClick={() => setUserEdit(user)} className="btns-card btn-edit"><i className="fas fa-edit"></i></button>
+                    <button onClick={() => deleteUser(user.id)} className="btns-card btn-delete"><i className="far fa-trash-alt"></i></button>
+                    <button onClick={() => {setUserEdit(user); setIsShowing(true)}} className="btns-card btn-edit"><i className="fas fa-edit"></i></button>
                 </div>
             </div>
         ))}
